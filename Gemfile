@@ -64,3 +64,7 @@ gem 'aws-sdk', '~> 2'
 gem 'masonry-rails', '~> 0.2.4'
 
 gem 'jquery-turbolinks'
+
+gem 'will_paginate', '~> 3.0'
+
+gem 'will_paginate-bootstrap'
