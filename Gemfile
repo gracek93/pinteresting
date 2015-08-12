@@ -56,3 +56,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #Paperclip
 gem 'paperclip', github: 'thoughtbot/paperclip'
+
+#Amason S3
+gem 'aws-sdk', '~> 2'
+
+#Jquery Mason
+gem 'masonry-rails', '~> 0.2.4'
+
+gem 'jquery-turbolinks'
