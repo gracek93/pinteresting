@@ -7,7 +7,11 @@ class PinsController < ApplicationController
   # GET /pins
   # GET /pins.json
   def index
+    if user_signed_in?
     @pins = Pin.all.order('created_at DESC').limit(30).paginate(:page => params[:page], :per_page => 16)
+    else
+     @pins = Pin.all.order('created_at DESC').limit(16) 
+    end
   end
 
   # GET /pins/1

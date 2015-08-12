@@ -23,6 +23,12 @@
       <% end %>
     </div>
 
+    <% if user_signed_in? %>
     <div class="center">
     <%= will_paginate @pins, renderer: BootstrapPagination::Rails%>
     </div>
+    <% else %>
+    <div class="panel panel-default center">
+    <h3 style="color:#c0392b"> Please <%= link_to "log in", new_user_session_path, :style=>'text-decoration: underline;' %> to view all pins</h3>
+    </div>
+    <%end%>
