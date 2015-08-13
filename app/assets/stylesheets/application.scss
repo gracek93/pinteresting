@@ -2,10 +2,10 @@
 *= require 'masonry/transitions'
 *= require_tree .
 */
-    @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+    @import url(http://fonts.googleapis.com/css?family=Raleway);
 
     $body-bg:                  #ecf0f1;
-    $font-family-sans-serif:   'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    $font-family-sans-serif:   'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     $navbar-height:             45px;
     $navbar-default-bg:         white;
     $navbar-default-brand-color: #c0392b;
@@ -34,5 +34,8 @@
         color: #c0392b;
     }
 
-    
+    .row {
+        margin-left:0;
+        margin-right:0;
+    }
 

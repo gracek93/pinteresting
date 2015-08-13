@@ -2,16 +2,27 @@
 <%= render 'pages/home' unless user_signed_in? %>
 
 
+    <div class="row"> <!-- Give this div your desired background color -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
  <div id="pins" class="transitions-enabled">
       <% @pins.each do |pin| %>
-        <div class="box panel panel-default">
+        <div class="box panel panel-default" style="margin-left:10px">
     
           <%= link_to image_tag(pin.image.url(:medium)), pin %>
           <div class="panel-body">
             <p><%= pin.description %></p>
            <strong> <%= pin.user.name if pin.user %> </strong>
             
-            <% if pin.user == current_user %>
+            <% if  current_user && pin.user == current_user %>
             <div class="actions">
               <%= link_to raw('<span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Edit'), edit_pin_path(pin) %> |
               <%= link_to raw('<span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete'), pin, method: :delete, data: { confirm: 'Are you sure?' } %>
@@ -28,7 +39,7 @@
     <%= will_paginate @pins, renderer: BootstrapPagination::Rails%>
     </div>
     <% else %>
-    <div class="panel panel-default center">
+    <div class="center">
     <h3 style="color:#c0392b"> Please <%= link_to "log in", new_user_session_path, :style=>'text-decoration: underline;' %> to view all pins</h3>
     </div>
     <%end%>
